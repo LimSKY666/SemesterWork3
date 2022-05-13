@@ -1,0 +1,59 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form > input {
+    margin-bottom: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: 3px #6E7B67 solid;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.form > input:focus {
+    background: #ECF5C6;
+}
+
+.form > input[type=submit] {
+    background: #6E7B67;
+    color: #E5E8E3;
+    padding: 10px 30px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.form > input[type=submit]:hover {
+    border-color: #ECF5C6;
+    background: #ECF5C6;
+    color: #252B08;
+}
+
+.form a {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    transition: .5s ease;
+}
+
+.form a:hover {
+    color:  #c4c4c4;
+}
+
+.form select {
+    margin: 10px 0;
+    border: 3px #6E7B67 solid;
+    border-radius: 30px;
+    padding: 5px 20px;
+}
+
+.form .price {
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+    background: #ECF5C6;
+    margin: 10px 0 20px;
+}
