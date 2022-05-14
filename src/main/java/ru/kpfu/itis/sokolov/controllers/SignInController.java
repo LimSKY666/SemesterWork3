@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ru.kpfu.itis.sokolov.dto.UserDto;
 import ru.kpfu.itis.sokolov.models.User;
 import ru.kpfu.itis.sokolov.security.VkAuth;
+import ru.kpfu.itis.sokolov.security.details.UserDetailsImpl;
 import ru.kpfu.itis.sokolov.services.tourService.TourService;
 import ru.kpfu.itis.sokolov.services.userService.UsersService;
 
@@ -21,6 +22,8 @@ import java.util.Optional;
 public class SignInController {
 
     private final UsersService usersService;
+
+    private final TourService tourService;
 
     @GetMapping("/signIn")
     public String getSignInPage(@RequestParam(value = "error", required = false) String error) {
@@ -49,10 +52,21 @@ public class SignInController {
         Optional<UserDto> userByCode = usersService.getUserByCode(user.getHashPassword());
         if (userByCode.isPresent()) {
             model.addAttribute("user", userByCode.get());
+            model.addAttribute("tours", tourService.getALlToursByUserId(userByCode.get().getId()));
 
+            UserDetailsImpl userDetails = new UserDetailsImpl(usersService.getUserById(userByCode.get().getId()));
+
+            Authentication auth = new VkAuth(userDetails);
+            SecurityContextHolder.getContext().setAuthentication(auth);
         } else {
             Optional<UserDto> userDto = usersService.saveUser(user);
             model.addAttribute("user", userDto.get());
+            model.addAttribute("tours", tourService.getALlToursByUserId(userDto.get().getId()));
+
+            UserDetailsImpl userDetails = new UserDetailsImpl(usersService.getUserById(userDto.get().getId()));
+
+            Authentication auth = new VkAuth(userDetails);
+            SecurityContextHolder.getContext().setAuthentication(auth);
         }
 
         return "account";
