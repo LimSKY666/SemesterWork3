@@ -23,7 +23,7 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public void banById(Long id) {
-        User user = userRepository.getOne(id);
+        User user = userRepository.getById(id);
         if (!user.isAdmin()) {
             user.setState(User.State.BANNED);
             userRepository.save(user);
@@ -51,7 +51,7 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public void unbanById(Long id) {
-        User user = userRepository.getOne(id);
+        User user = userRepository.getById(id);
         if (!user.isAdmin()) {
             user.setState(User.State.ACTIVE);
             userRepository.save(user);
