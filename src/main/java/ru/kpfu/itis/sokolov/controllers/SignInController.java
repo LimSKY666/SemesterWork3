@@ -69,6 +69,6 @@ public class SignInController {
             SecurityContextHolder.getContext().setAuthentication(auth);
         }
 
-        return "account";
+        return "redirect:/account";
     }
 }

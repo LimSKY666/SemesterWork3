@@ -13,7 +13,7 @@
             charset="windows-1251"
     ></script>
     <script type="text/javascript">
-        VK.init({ apiId: 7794785 });
+        VK.init({ apiId: 8167930 });
     </script>
 </head>
 <body>
@@ -35,6 +35,7 @@
         </div>
     </div>
 </div>
+
 
 </body>
 </html>

@@ -1,13 +1,19 @@
 @import "reset.css";
 @import "header.css";
 
+* {
+    box-sizing: b;
+}
+
 body {
 
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 20px;
     width: 100%;
     min-height: 100vh;
+
 }
+
 
 .body-wrapper {
     width: 100%;
@@ -19,12 +25,14 @@ body {
     margin: auto;
 }
 
+
 .main_title {
     text-align: center;
     font-size: 32px;
     font-weight: 400;
     margin: 20px 0;
 }
+
 
 /* user */
 
@@ -42,14 +50,17 @@ body {
     color: #6E7B67;
 }
 
+
 /* tours */
 
 .main_tours {
+
 }
 
 .tours_title {
     font-size: 32px;
     text-align: center;
+
     margin: 20px 0;
 }
 
@@ -63,12 +74,14 @@ body {
     padding: 5px 10px 10px 10px;
     border-bottom: 2px #ECF5C6 solid;
     transition: .5s ease;
+
     cursor: pointer;
 }
 
 .tours_tour:hover {
     background: #6E7B67;
     color: #fff;
+
 }
 
 .go-to-tours {
@@ -78,6 +91,7 @@ body {
     background: #ECF5C6;
     padding: 10px 0;
     margin: 0;
+
     cursor: pointer;
     transition: .5s ease;
 }

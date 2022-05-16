@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "header.css";
 @import "form.css";
 
 * {
@@ -6,11 +7,14 @@
 }
 
 body {
+
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 20px;
     width: 100%;
     min-height: 100vh;
+
 }
+
 
 .body-wrapper {
     width: 100%;
@@ -22,14 +26,10 @@ body {
     margin: auto;
 }
 
+
 .main_title {
     text-align: center;
     font-size: 32px;
     font-weight: 400;
-
-    padding-top: 200px;
-    margin-bottom: 20px;
-}
-
-.main_form-wrapper {
+    margin: 20px 0;
 }
