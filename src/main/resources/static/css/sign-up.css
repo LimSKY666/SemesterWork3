@@ -1,6 +1,10 @@
 @import "reset.css";
 @import "form.css";
 
+h1 {
+    text-align:center;
+    padding-top: 260px;
+}
 body {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 20px;
@@ -22,7 +26,6 @@ body {
     text-align: center;
     font-size: 32px;
     font-weight: 400;
-    padding-top: 200px;
     margin-bottom: 20px;
 }
 

@@ -30,6 +30,7 @@
 <body>
 <div class="body-wrapper">
     <div class="main">
+        <h1 class="error"></h1>
         <h2 class="main_title">Регистрация</h2>
         <p class="lead" id="error" style="height: 10px;display: flex;align-items: center;justify-content: center;"></p>
         <div class="main_form-wrapper">

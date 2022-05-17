@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/sign-up.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/sign-up.css"/>
     <title>Login</title>
     <script
             type="text/javascript"
@@ -19,7 +19,7 @@
 <body>
 <div class="body-wrapper">
     <div class="main">
-        <h1 class="error"></h1>
+        <h1 class="error">Ошибка при входе. Повторите попытку</h1>
         <h2 class="main_title">Вход</h2>
         <div class="main_form-wrapper">
             <form class="form" method="post" action="/signIn">
