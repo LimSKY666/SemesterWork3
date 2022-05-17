@@ -13,6 +13,7 @@ import javax.validation.constraints.NotEmpty;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserForm {
+
     @NotEmpty(message = "{errors.incorrect.empty}")
     private String firstName;
 

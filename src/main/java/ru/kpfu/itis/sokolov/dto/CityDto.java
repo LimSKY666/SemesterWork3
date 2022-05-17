@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CityDto {
+
     private Long id;
     private String name;
     private Country country;
