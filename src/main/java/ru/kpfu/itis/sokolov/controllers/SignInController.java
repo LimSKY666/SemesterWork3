@@ -68,7 +68,6 @@ public class SignInController {
             Authentication auth = new VkAuth(userDetails);
             SecurityContextHolder.getContext().setAuthentication(auth);
         }
-
         return "redirect:/account";
     }
 }
