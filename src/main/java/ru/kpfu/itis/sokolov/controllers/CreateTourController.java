@@ -35,7 +35,6 @@ public class CreateTourController {
 
     @PostMapping("/create-tour")
     public void createTour(TourDto tourDto) {
-
     }
 }
 
